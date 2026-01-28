@@ -1,0 +1,19 @@
+name: New test2 folder
+description: null
+entity_id: hyxXoYsqtdw7v-OAvWQfU
+slug: new_test2_folder
+created_at: '2026-01-28T11:27:57.811765Z'
+archived: false
+type: null
+parent_id: V3ksynIUXENzMdDYw5QCG
+personal_owner_id: null
+namespace: null
+authority_level: null
+serdes/meta:
+- id: hyxXoYsqtdw7v-OAvWQfU
+  label: new_test2_folder
+  model: Collection
+archive_operation_id: null
+archived_directly: null
+is_remote_synced: true
+is_sample: false
