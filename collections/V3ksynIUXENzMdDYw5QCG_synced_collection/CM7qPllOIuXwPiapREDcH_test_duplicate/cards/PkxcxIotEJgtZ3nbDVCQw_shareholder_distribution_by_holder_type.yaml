@@ -1,0 +1,226 @@
+name: Shareholder Distribution by Holder Type
+description: null
+entity_id: PkxcxIotEJgtZ3nbDVCQw
+created_at: '2026-01-28T11:25:46.001335Z'
+creator_id: kanishka.shetty@vinylequity.com
+display: pie
+archived: false
+collection_id: CM7qPllOIuXwPiapREDcH
+collection_preview: true
+collection_position: null
+query_type: query
+database_id: Sandbox
+table_id:
+- Sandbox
+- public
+- a_registered_owner_detailed_report_mv2
+enable_embedding: false
+embedding_params: null
+made_public_by_id: null
+public_uuid: null
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Sandbox
+  query:
+    aggregation:
+    - - distinct
+      - - field
+        - - Sandbox
+          - public
+          - a_registered_owner_detailed_report_mv2
+          - stakeholder_id
+        - base-type: type/UUID
+    breakout:
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - holder_type
+      - base-type: type/Text
+    expressions:
+      Issuer:
+      - replace
+      - - field
+        - - Sandbox
+          - public
+          - a_registered_owner_detailed_report_mv2
+          - issuer_legal_name
+        - base-type: type/Text
+      - ' '
+      - '-'
+    filter:
+    - and
+    - - =
+      - - field
+        - - Sandbox
+          - public
+          - a_registered_owner_detailed_report_mv2
+          - issuer_legal_name
+        - base-type: type/Text
+      - Stark Industries
+    - - =
+      - - field
+        - - Sandbox
+          - public
+          - a_registered_owner_detailed_report_mv2
+          - issue_name
+        - base-type: type/Text
+      - MONOGRAM COMMON DEMO
+    - - <
+      - - field
+        - - Sandbox
+          - public
+          - a_registered_owner_detailed_report_mv2
+          - issue_date
+        - base-type: type/Date
+      - '2025-09-05'
+    joins:
+    - alias: Country State Lookup - State
+      condition:
+      - and
+      - - =
+        - - field
+          - - Sandbox
+            - public
+            - a_registered_owner_detailed_report_mv2
+            - state
+          - base-type: type/Text
+        - - field
+          - - Sandbox
+            - public
+            - country_state_lookup
+            - state_code
+          - base-type: type/Text
+            join-alias: Country State Lookup - State
+      - - =
+        - - field
+          - - Sandbox
+            - public
+            - a_registered_owner_detailed_report_mv2
+            - country
+          - base-type: type/Text
+        - - field
+          - - Sandbox
+            - public
+            - country_state_lookup
+            - country_code
+          - base-type: type/Text
+            join-alias: Country State Lookup - State
+      source-table:
+      - Sandbox
+      - public
+      - country_state_lookup
+      strategy: left-join
+    source-table:
+    - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+  type: query
+result_metadata:
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Holder Type
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - holder_type
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - holder_type
+  name: holder_type
+  position: 3
+  semantic_type: type/Category
+  source: breakout
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/breakout?: true
+  lib/deduplicated-name: holder_type
+  lib/desired-column-alias: holder_type
+  lib/original-display-name: Holder Type
+  lib/original-name: holder_type
+  lib/source: source/table-defaults
+  lib/source-column-alias: holder_type
+  qp/implicit-field?: true
+- base_type: type/Integer
+  database_type: int8
+  display_name: Distinct values of Stakeholder ID
+  effective_type: type/Integer
+  field_ref:
+  - aggregation
+  - 0
+  name: count
+  semantic_type: type/Quantity
+  source: aggregation
+  lib/deduplicated-name: count
+  lib/desired-column-alias: count
+  lib/original-name: count
+  lib/source: source/aggregations
+  lib/source-column-alias: count
+visualization_settings:
+  column_settings: null
+  pie.dimension:
+  - holder_type
+  pie.percent_visibility: inside
+  pie.show_labels: true
+  pie.show_legend: true
+  pie.show_total: true
+  pivot_table.collapsed_rows:
+    rows:
+    - holder_type
+    - legal_name
+    value:
+    - '["ASSOCIATION_OR_CLUB"]'
+    - '["BROKER"]'
+    - '["CHARITY"]'
+    - '["CORPORATION"]'
+    - '["CUSTODIAN_FOR_A_MINOR"]'
+    - '["EXECUTOR_OF_ESTATE"]'
+    - '["FINANCIAL_INSTITUTION"]'
+    - '["INDIVIDUAL"]'
+    - '["IRA"]'
+    - '["JOINT_TENANTS"]'
+    - '["LLC"]'
+    - '["NOMINEE"]'
+    - '["PARTNERSHIP"]'
+    - '["PENSION_OR_PROFIT_SH_PLAN"]'
+    - '["RELIGIOUS_ORGANIZATION"]'
+    - '["SCHOOL"]'
+    - '["TRUST"]'
+  pivot_table.column_split:
+    columns: []
+    rows:
+    - holder_type
+    - legal_name
+    values:
+    - count
+  pivot_table.column_widths:
+    leftHeaderWidths:
+    - 339
+    - 232
+    totalLeftHeaderWidths: 571
+    valueHeaderWidths:
+      '0': 127
+  version: 2
+card_schema: 23
+serdes/meta:
+- id: PkxcxIotEJgtZ3nbDVCQw
+  label: shareholder_distribution_by_holder_type
+  model: Card
+archived_directly: false
+dashboard_id: SCj1YRL_phhm6ultciOLr
+document_id: null
+embedding_type: null
+metabase_version: v1.58.1 (7fbf305)
+source_card_id: null
+type: question

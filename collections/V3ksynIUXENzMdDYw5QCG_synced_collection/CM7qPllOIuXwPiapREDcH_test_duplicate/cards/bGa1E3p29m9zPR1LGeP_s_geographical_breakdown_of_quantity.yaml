@@ -1,0 +1,176 @@
+name: Geographical Breakdown of Quantity
+description: null
+entity_id: bGa1E3p29m9zPR1LGeP_s
+created_at: '2026-01-28T11:25:46.001335Z'
+creator_id: kanishka.shetty@vinylequity.com
+display: map
+archived: false
+collection_id: CM7qPllOIuXwPiapREDcH
+collection_preview: true
+collection_position: null
+query_type: query
+database_id: Sandbox
+table_id:
+- Sandbox
+- public
+- a_registered_owner_detailed_report_mv2
+enable_embedding: false
+embedding_params: null
+made_public_by_id: null
+public_uuid: null
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Sandbox
+  query:
+    aggregation:
+    - - sum
+      - - field
+        - - Sandbox
+          - public
+          - a_registered_owner_detailed_report_mv2
+          - quantity
+        - base-type: type/Decimal
+    breakout:
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - country_name
+      - base-type: type/Text
+    expressions:
+      Issuer:
+      - replace
+      - - field
+        - - Sandbox
+          - public
+          - a_registered_owner_detailed_report_mv2
+          - issuer_legal_name
+        - base-type: type/Text
+      - ' '
+      - '-'
+    filter:
+    - and
+    - - =
+      - - field
+        - - Sandbox
+          - public
+          - a_registered_owner_detailed_report_mv2
+          - issuer_legal_name
+        - base-type: type/Text
+      - Stark Industries
+    - - =
+      - - field
+        - - Sandbox
+          - public
+          - a_registered_owner_detailed_report_mv2
+          - issue_name
+        - base-type: type/Text
+      - MONOGRAM COMMON DEMO
+    - - <
+      - - field
+        - - Sandbox
+          - public
+          - a_registered_owner_detailed_report_mv2
+          - issue_date
+        - base-type: type/Date
+      - '2025-09-05'
+    joins:
+    - alias: Country State Lookup - Country
+      condition:
+      - =
+      - - field
+        - - Sandbox
+          - public
+          - a_registered_owner_detailed_report_mv2
+          - country
+        - base-type: type/Text
+      - - field
+        - - Sandbox
+          - public
+          - country_state_lookup
+          - country_code
+        - base-type: type/Text
+          join-alias: Country State Lookup - Country
+      source-table:
+      - Sandbox
+      - public
+      - country_state_lookup
+      strategy: left-join
+    source-table:
+    - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+  type: query
+result_metadata:
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Country Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - country_name
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - country_name
+  name: country_name
+  position: 18
+  semantic_type: type/Country
+  source: breakout
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/breakout?: true
+  lib/deduplicated-name: country_name
+  lib/desired-column-alias: country_name
+  lib/original-display-name: Country Name
+  lib/original-name: country_name
+  lib/source: source/table-defaults
+  lib/source-column-alias: country_name
+  qp/implicit-field?: true
+- base_type: type/Decimal
+  database_type: numeric
+  display_name: Sum of Quantity
+  effective_type: type/Decimal
+  field_ref:
+  - aggregation
+  - 0
+  name: sum
+  semantic_type: null
+  source: aggregation
+  lib/deduplicated-name: sum
+  lib/desired-column-alias: sum
+  lib/original-name: sum
+  lib/source: source/aggregations
+  lib/source-column-alias: sum
+visualization_settings:
+  column_settings: null
+  map.colors:
+  - rgb(252, 218, 218)
+  - rgb(246, 169, 169)
+  - rgb(241, 120, 120)
+  - rgb(236, 71, 71)
+  - hsl(0, 82.9%, 43.2%)
+  map.region: world_countries
+  map.type: region
+card_schema: 23
+serdes/meta:
+- id: bGa1E3p29m9zPR1LGeP_s
+  label: geographical_breakdown_of_quantity
+  model: Card
+archived_directly: false
+dashboard_id: SCj1YRL_phhm6ultciOLr
+document_id: null
+embedding_type: null
+metabase_version: v1.58.1 (7fbf305)
+source_card_id: null
+type: question

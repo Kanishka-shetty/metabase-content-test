@@ -1,0 +1,236 @@
+name: Sample Certified
+description: null
+entity_id: aIku53QiQOzJBjT3adoiE
+created_at: '2026-01-28T11:25:21.645204Z'
+creator_id: kanishka.shetty@vinylequity.com
+display: table
+archived: false
+collection_id: CM7qPllOIuXwPiapREDcH
+collection_preview: true
+collection_position: null
+query_type: query
+database_id: Sandbox
+table_id:
+- Sandbox
+- public
+- a_certified_registered_holders_mv__mbarchiv__1762500783
+enable_embedding: false
+embedding_params: null
+made_public_by_id: null
+public_uuid: null
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Sandbox
+  query:
+    fields:
+    - - field
+      - - Sandbox
+        - public
+        - a_certified_registered_holders_mv__mbarchiv__1762500783
+        - stakeholder_id
+      - base-type: type/UUID
+    - - field
+      - - Sandbox
+        - public
+        - a_certified_registered_holders_mv__mbarchiv__1762500783
+        - legal_name
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_certified_registered_holders_mv__mbarchiv__1762500783
+        - address
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_certified_registered_holders_mv__mbarchiv__1762500783
+        - email_address
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_certified_registered_holders_mv__mbarchiv__1762500783
+        - issuer_id
+      - base-type: type/UUID
+    source-table:
+    - Sandbox
+    - public
+    - a_certified_registered_holders_mv__mbarchiv__1762500783
+  type: query
+result_metadata:
+- active: true
+  base_type: type/UUID
+  database_type: uuid
+  display_name: Stakeholder ID
+  effective_type: type/UUID
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_certified_registered_holders_mv__mbarchiv__1762500783
+    - stakeholder_id
+  - base-type: type/UUID
+  id:
+  - Sandbox
+  - public
+  - a_certified_registered_holders_mv__mbarchiv__1762500783
+  - stakeholder_id
+  name: stakeholder_id
+  position: 0
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_certified_registered_holders_mv__mbarchiv__1762500783
+  visibility_type: normal
+  lib/deduplicated-name: stakeholder_id
+  lib/desired-column-alias: stakeholder_id
+  lib/original-display-name: Stakeholder ID
+  lib/original-name: stakeholder_id
+  lib/source: source/table-defaults
+  lib/source-column-alias: stakeholder_id
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Legal Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_certified_registered_holders_mv__mbarchiv__1762500783
+    - legal_name
+  - base-type: type/Text
+  id:
+  - Sandbox
+  - public
+  - a_certified_registered_holders_mv__mbarchiv__1762500783
+  - legal_name
+  name: legal_name
+  position: 1
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_certified_registered_holders_mv__mbarchiv__1762500783
+  visibility_type: normal
+  lib/deduplicated-name: legal_name
+  lib/desired-column-alias: legal_name
+  lib/original-display-name: Legal Name
+  lib/original-name: legal_name
+  lib/source: source/table-defaults
+  lib/source-column-alias: legal_name
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Address
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_certified_registered_holders_mv__mbarchiv__1762500783
+    - address
+  - base-type: type/Text
+  id:
+  - Sandbox
+  - public
+  - a_certified_registered_holders_mv__mbarchiv__1762500783
+  - address
+  name: address
+  position: 3
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_certified_registered_holders_mv__mbarchiv__1762500783
+  visibility_type: normal
+  lib/deduplicated-name: address
+  lib/desired-column-alias: address
+  lib/original-display-name: Address
+  lib/original-name: address
+  lib/source: source/table-defaults
+  lib/source-column-alias: address
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Email Address
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_certified_registered_holders_mv__mbarchiv__1762500783
+    - email_address
+  - base-type: type/Text
+  id:
+  - Sandbox
+  - public
+  - a_certified_registered_holders_mv__mbarchiv__1762500783
+  - email_address
+  name: email_address
+  position: 2
+  semantic_type: type/Email
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_certified_registered_holders_mv__mbarchiv__1762500783
+  visibility_type: normal
+  lib/deduplicated-name: email_address
+  lib/desired-column-alias: email_address
+  lib/original-display-name: Email Address
+  lib/original-name: email_address
+  lib/source: source/table-defaults
+  lib/source-column-alias: email_address
+- active: true
+  base_type: type/UUID
+  database_type: uuid
+  display_name: Issuer ID
+  effective_type: type/UUID
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_certified_registered_holders_mv__mbarchiv__1762500783
+    - issuer_id
+  - base-type: type/UUID
+  id:
+  - Sandbox
+  - public
+  - a_certified_registered_holders_mv__mbarchiv__1762500783
+  - issuer_id
+  name: issuer_id
+  position: 19
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_certified_registered_holders_mv__mbarchiv__1762500783
+  visibility_type: normal
+  lib/deduplicated-name: issuer_id
+  lib/desired-column-alias: issuer_id
+  lib/original-display-name: Issuer ID
+  lib/original-name: issuer_id
+  lib/source: source/table-defaults
+  lib/source-column-alias: issuer_id
+visualization_settings:
+  column_settings: null
+card_schema: 23
+serdes/meta:
+- id: aIku53QiQOzJBjT3adoiE
+  label: sample_certified
+  model: Card
+archived_directly: false
+dashboard_id: LiGyi8weiftScHb2Drqyi
+document_id: null
+embedding_type: null
+metabase_version: v1.58.1 (7fbf305)
+source_card_id: null
+type: question

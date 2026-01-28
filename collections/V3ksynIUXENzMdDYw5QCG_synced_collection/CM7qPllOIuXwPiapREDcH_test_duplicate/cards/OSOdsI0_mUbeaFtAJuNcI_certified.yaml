@@ -1,0 +1,223 @@
+name: Certified
+description: null
+entity_id: OSOdsI0_mUbeaFtAJuNcI
+created_at: '2026-01-28T11:25:21.645204Z'
+creator_id: kanishka.shetty@vinylequity.com
+display: table
+archived: false
+collection_id: CM7qPllOIuXwPiapREDcH
+collection_preview: true
+collection_position: null
+query_type: native
+database_id: Sandbox
+table_id: null
+enable_embedding: false
+embedding_params: null
+made_public_by_id: null
+public_uuid: null
+parameters:
+- default: '2025-08-26'
+  id: f0254dc7-6a80-4d93-99d7-f0886c4aa839
+  isMultiSelect: false
+  name: Date Range
+  slug: date_range
+  target:
+  - variable
+  - - template-tag
+    - date_range
+  type: date/single
+- id: d224a8c7-5261-4598-a032-a6503f8f94cf
+  isMultiSelect: false
+  name: Issue Name
+  slug: issue_name
+  target:
+  - variable
+  - - template-tag
+    - issue_name
+  type: string/=
+  values_query_type: search
+- id: d75d7296-65ff-40f4-9edb-17c6f86f6758
+  isMultiSelect: false
+  name: Issuer Name
+  slug: issuer_name
+  target:
+  - variable
+  - - template-tag
+    - issuer_name
+  type: string/=
+  values_query_type: search
+- id: e501774d-be7d-4f98-adf1-930cd52ffc33
+  isMultiSelect: false
+  name: Issuer ID
+  slug: issuer_id
+  target:
+  - variable
+  - - template-tag
+    - issuer_id
+  type: string/=
+  values_query_type: search
+parameter_mappings: []
+dataset_query:
+  database: Sandbox
+  native:
+    query: |
+      SELECT
+        crh.legal_name AS legal_name,
+        crh.address AS address,
+        crh.email_address AS email_address,
+        crh.total_holding AS total_holding,
+        crh.issue_date AS issue_date,
+        crh.cancel_transaction_date AS cancel_transaction_date,
+
+        CASE
+          WHEN crh.cancel_transaction_date IS NULL
+               OR crh.cancel_transaction_date > {{date_range}}
+          THEN 'Active'
+          ELSE 'Inactive'
+        END AS status
+
+      FROM public.a_certified_registered_holders_mv crh
+
+      WHERE 1=1
+        [[AND crh.issue_name = {{issue_name}}]]
+        [[AND crh.issuer_legal_name = {{issuer_name}}]]
+        [[AND crh.issuer_id = {{issuer_id}}]]
+        [[AND crh.issue_date < {{date_range}}]]
+    template-tags:
+      date_range:
+        default: '2025-08-26'
+        display-name: Date Range
+        id: f0254dc7-6a80-4d93-99d7-f0886c4aa839
+        name: date_range
+        type: date
+      issue_name:
+        display-name: Issue Name
+        id: d224a8c7-5261-4598-a032-a6503f8f94cf
+        name: issue_name
+        type: text
+      issuer_id:
+        display-name: Issuer ID
+        id: e501774d-be7d-4f98-adf1-930cd52ffc33
+        name: issuer_id
+        type: text
+      issuer_name:
+        display-name: Issuer Name
+        id: d75d7296-65ff-40f4-9edb-17c6f86f6758
+        name: issuer_name
+        type: text
+  type: native
+result_metadata:
+- base_type: type/Text
+  database_type: varchar
+  display_name: legal_name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - legal_name
+  - base-type: type/Text
+  name: legal_name
+  semantic_type: null
+  source: native
+  lib/deduplicated-name: legal_name
+  lib/original-name: legal_name
+  lib/source: source/native
+- base_type: type/Text
+  database_type: varchar
+  display_name: address
+  effective_type: type/Text
+  field_ref:
+  - field
+  - address
+  - base-type: type/Text
+  name: address
+  semantic_type: null
+  source: native
+  lib/deduplicated-name: address
+  lib/original-name: address
+  lib/source: source/native
+- base_type: type/Text
+  database_type: varchar
+  display_name: email_address
+  effective_type: type/Text
+  field_ref:
+  - field
+  - email_address
+  - base-type: type/Text
+  name: email_address
+  semantic_type: null
+  source: native
+  lib/deduplicated-name: email_address
+  lib/original-name: email_address
+  lib/source: source/native
+- base_type: type/Decimal
+  database_type: numeric
+  display_name: total_holding
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - total_holding
+  - base-type: type/Decimal
+  name: total_holding
+  semantic_type: null
+  source: native
+  lib/deduplicated-name: total_holding
+  lib/original-name: total_holding
+  lib/source: source/native
+- base_type: type/Date
+  database_type: date
+  display_name: issue_date
+  effective_type: type/Date
+  field_ref:
+  - field
+  - issue_date
+  - base-type: type/Date
+  name: issue_date
+  semantic_type: null
+  source: native
+  lib/deduplicated-name: issue_date
+  lib/original-name: issue_date
+  lib/source: source/native
+- base_type: type/Date
+  database_type: date
+  display_name: cancel_transaction_date
+  effective_type: type/Date
+  field_ref:
+  - field
+  - cancel_transaction_date
+  - base-type: type/Date
+  name: cancel_transaction_date
+  semantic_type: type/CancelationDate
+  source: native
+  lib/deduplicated-name: cancel_transaction_date
+  lib/original-name: cancel_transaction_date
+  lib/source: source/native
+- base_type: type/Text
+  database_type: text
+  display_name: status
+  effective_type: type/Text
+  field_ref:
+  - field
+  - status
+  - base-type: type/Text
+  name: status
+  semantic_type: type/Category
+  source: native
+  lib/deduplicated-name: status
+  lib/original-name: status
+  lib/source: source/native
+visualization_settings:
+  column_settings: null
+  table.cell_column: total_holding
+  table.pivot_column: status
+card_schema: 23
+serdes/meta:
+- id: OSOdsI0_mUbeaFtAJuNcI
+  label: certified
+  model: Card
+archived_directly: false
+dashboard_id: LiGyi8weiftScHb2Drqyi
+document_id: null
+embedding_type: null
+metabase_version: v1.58.1 (7fbf305)
+source_card_id: null
+type: question

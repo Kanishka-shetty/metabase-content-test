@@ -1,0 +1,1434 @@
+name: Detailed List of Registered Holders
+description: null
+entity_id: lbJYg0kI_aeYqGR5M_OaM
+created_at: '2026-01-28T11:25:46.001335Z'
+creator_id: kanishka.shetty@vinylequity.com
+display: table
+archived: false
+collection_id: CM7qPllOIuXwPiapREDcH
+collection_preview: true
+collection_position: null
+query_type: query
+database_id: Sandbox
+table_id:
+- Sandbox
+- public
+- a_registered_owner_detailed_report_mv2
+enable_embedding: false
+embedding_params: null
+made_public_by_id: null
+public_uuid: null
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Sandbox
+  query:
+    expressions:
+      Issuer:
+      - replace
+      - - field
+        - - Sandbox
+          - public
+          - a_registered_owner_detailed_report_mv2
+          - issuer_legal_name
+        - base-type: type/Text
+      - ' '
+      - '-'
+      logo_url:
+      - concat
+      - https://raw.githubusercontent.com/harshaf87/Images/main/
+      - - lower
+        - - replace
+          - - field
+            - - Sandbox
+              - public
+              - a_registered_owner_detailed_report_mv2
+              - issuer_legal_name
+            - base-type: type/Text
+          - ' '
+          - _
+      - .png
+    fields:
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - legal_name
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - holder_type
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - registered_owner_tin
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - holding_type
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - drs_or_certificate
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - issue_date
+      - base-type: type/Date
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - quantity
+      - base-type: type/Decimal
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - legend_or_stop
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - acquisition_date
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - cost_basis
+      - base-type: type/Decimal
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - inheritance_and_or_gifted
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - gift_fmv
+      - base-type: type/Decimal
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - address
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - associated_user_name
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - associated_user_name_3
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - email_address
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - phone_number
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - lost_holder
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - date_of_last_contact
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - affiliate
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - section_16_officer
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - holder_stop
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - associated_user_tin
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - associated_user_name_1
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - associated_user_tin_1
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - associated_user_name_2
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - associated_user_tin_2
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - associated_user_tin_3
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - registered_owner_id
+      - base-type: type/UUID
+    - - expression
+      - logo_url
+      - base-type: type/Text
+    - - expression
+      - Issuer
+      - base-type: type/Text
+    joins:
+    - alias: Country State Lookup - State
+      condition:
+      - and
+      - - =
+        - - field
+          - - Sandbox
+            - public
+            - a_registered_owner_detailed_report_mv2
+            - state
+          - base-type: type/Text
+        - - field
+          - - Sandbox
+            - public
+            - country_state_lookup
+            - state_code
+          - base-type: type/Text
+            join-alias: Country State Lookup - State
+      - - =
+        - - field
+          - - Sandbox
+            - public
+            - a_registered_owner_detailed_report_mv2
+            - country
+          - base-type: type/Text
+        - - field
+          - - Sandbox
+            - public
+            - country_state_lookup
+            - country_code
+          - base-type: type/Text
+            join-alias: Country State Lookup - State
+      fields:
+      - - field
+        - - Sandbox
+          - public
+          - country_state_lookup
+          - country_name
+        - base-type: type/Text
+          join-alias: Country State Lookup - State
+      - - field
+        - - Sandbox
+          - public
+          - country_state_lookup
+          - full_state_name
+        - base-type: type/Text
+          join-alias: Country State Lookup - State
+      source-table:
+      - Sandbox
+      - public
+      - country_state_lookup
+      strategy: left-join
+    source-table:
+    - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+  type: query
+result_metadata:
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Legal Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - legal_name
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - legal_name
+  name: legal_name
+  position: 2
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: legal_name
+  lib/desired-column-alias: legal_name
+  lib/original-display-name: Legal Name
+  lib/original-name: legal_name
+  lib/source: source/table-defaults
+  lib/source-column-alias: legal_name
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Holder Type
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - holder_type
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - holder_type
+  name: holder_type
+  position: 3
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: holder_type
+  lib/desired-column-alias: holder_type
+  lib/original-display-name: Holder Type
+  lib/original-name: holder_type
+  lib/source: source/table-defaults
+  lib/source-column-alias: holder_type
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Registered Owner Tin
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - registered_owner_tin
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - registered_owner_tin
+  name: registered_owner_tin
+  position: 4
+  semantic_type: type/Owner
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: registered_owner_tin
+  lib/desired-column-alias: registered_owner_tin
+  lib/original-display-name: Registered Owner Tin
+  lib/original-name: registered_owner_tin
+  lib/source: source/table-defaults
+  lib/source-column-alias: registered_owner_tin
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Holding Type
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - holding_type
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - holding_type
+  name: holding_type
+  position: 5
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: holding_type
+  lib/desired-column-alias: holding_type
+  lib/original-display-name: Holding Type
+  lib/original-name: holding_type
+  lib/source: source/table-defaults
+  lib/source-column-alias: holding_type
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Drs Or Certificate
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - drs_or_certificate
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - drs_or_certificate
+  name: drs_or_certificate
+  position: 6
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: drs_or_certificate
+  lib/desired-column-alias: drs_or_certificate
+  lib/original-display-name: Drs Or Certificate
+  lib/original-name: drs_or_certificate
+  lib/source: source/table-defaults
+  lib/source-column-alias: drs_or_certificate
+- active: true
+  base_type: type/Date
+  database_type: date
+  display_name: Issue Date
+  effective_type: type/Date
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - issue_date
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - issue_date
+  name: issue_date
+  position: 7
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: issue_date
+  lib/desired-column-alias: issue_date
+  lib/original-display-name: Issue Date
+  lib/original-name: issue_date
+  lib/source: source/table-defaults
+  lib/source-column-alias: issue_date
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: Quantity
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - quantity
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - quantity
+  name: quantity
+  position: 8
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: quantity
+  lib/desired-column-alias: quantity
+  lib/original-display-name: Quantity
+  lib/original-name: quantity
+  lib/source: source/table-defaults
+  lib/source-column-alias: quantity
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Legend Or Stop
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - legend_or_stop
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - legend_or_stop
+  name: legend_or_stop
+  position: 9
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: legend_or_stop
+  lib/desired-column-alias: legend_or_stop
+  lib/original-display-name: Legend Or Stop
+  lib/original-name: legend_or_stop
+  lib/source: source/table-defaults
+  lib/source-column-alias: legend_or_stop
+- active: true
+  base_type: type/Date
+  database_type: date
+  display_name: Acquisition Date
+  effective_type: type/Date
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - acquisition_date
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - acquisition_date
+  name: acquisition_date
+  position: 10
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: acquisition_date
+  lib/desired-column-alias: acquisition_date
+  lib/original-display-name: Acquisition Date
+  lib/original-name: acquisition_date
+  lib/source: source/table-defaults
+  lib/source-column-alias: acquisition_date
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: Cost Basis
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - cost_basis
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - cost_basis
+  name: cost_basis
+  position: 11
+  semantic_type: type/Cost
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: cost_basis
+  lib/desired-column-alias: cost_basis
+  lib/original-display-name: Cost Basis
+  lib/original-name: cost_basis
+  lib/source: source/table-defaults
+  lib/source-column-alias: cost_basis
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Inheritance And Or Gifted
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - inheritance_and_or_gifted
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - inheritance_and_or_gifted
+  name: inheritance_and_or_gifted
+  position: 12
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: inheritance_and_or_gifted
+  lib/desired-column-alias: inheritance_and_or_gifted
+  lib/original-display-name: Inheritance And Or Gifted
+  lib/original-name: inheritance_and_or_gifted
+  lib/source: source/table-defaults
+  lib/source-column-alias: inheritance_and_or_gifted
+- active: true
+  base_type: type/Decimal
+  database_type: numeric
+  display_name: Gift Fmv
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - gift_fmv
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - gift_fmv
+  name: gift_fmv
+  position: 13
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: gift_fmv
+  lib/desired-column-alias: gift_fmv
+  lib/original-display-name: Gift Fmv
+  lib/original-name: gift_fmv
+  lib/source: source/table-defaults
+  lib/source-column-alias: gift_fmv
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Address
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - address
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - address
+  name: address
+  position: 14
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: address
+  lib/desired-column-alias: address
+  lib/original-display-name: Address
+  lib/original-name: address
+  lib/source: source/table-defaults
+  lib/source-column-alias: address
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Associated User Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - associated_user_name
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - associated_user_name
+  name: associated_user_name
+  position: 28
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: associated_user_name
+  lib/desired-column-alias: associated_user_name
+  lib/original-display-name: Associated User Name
+  lib/original-name: associated_user_name
+  lib/source: source/table-defaults
+  lib/source-column-alias: associated_user_name
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Associated User Name 3
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - associated_user_name_3
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - associated_user_name_3
+  name: associated_user_name_3
+  position: 34
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: associated_user_name_3
+  lib/desired-column-alias: associated_user_name_3
+  lib/original-display-name: Associated User Name 3
+  lib/original-name: associated_user_name_3
+  lib/source: source/table-defaults
+  lib/source-column-alias: associated_user_name_3
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Email Address
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - email_address
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - email_address
+  name: email_address
+  position: 21
+  semantic_type: type/Email
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: email_address
+  lib/desired-column-alias: email_address
+  lib/original-display-name: Email Address
+  lib/original-name: email_address
+  lib/source: source/table-defaults
+  lib/source-column-alias: email_address
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Phone Number
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - phone_number
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - phone_number
+  name: phone_number
+  position: 22
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: phone_number
+  lib/desired-column-alias: phone_number
+  lib/original-display-name: Phone Number
+  lib/original-name: phone_number
+  lib/source: source/table-defaults
+  lib/source-column-alias: phone_number
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Lost Holder
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - lost_holder
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - lost_holder
+  name: lost_holder
+  position: 23
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: lost_holder
+  lib/desired-column-alias: lost_holder
+  lib/original-display-name: Lost Holder
+  lib/original-name: lost_holder
+  lib/source: source/table-defaults
+  lib/source-column-alias: lost_holder
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Date Of Last Contact
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - date_of_last_contact
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - date_of_last_contact
+  name: date_of_last_contact
+  position: 24
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: date_of_last_contact
+  lib/desired-column-alias: date_of_last_contact
+  lib/original-display-name: Date Of Last Contact
+  lib/original-name: date_of_last_contact
+  lib/source: source/table-defaults
+  lib/source-column-alias: date_of_last_contact
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Affiliate
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - affiliate
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - affiliate
+  name: affiliate
+  position: 25
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: affiliate
+  lib/desired-column-alias: affiliate
+  lib/original-display-name: Affiliate
+  lib/original-name: affiliate
+  lib/source: source/table-defaults
+  lib/source-column-alias: affiliate
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Section 16 Officer
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - section_16_officer
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - section_16_officer
+  name: section_16_officer
+  position: 26
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: section_16_officer
+  lib/desired-column-alias: section_16_officer
+  lib/original-display-name: Section 16 Officer
+  lib/original-name: section_16_officer
+  lib/source: source/table-defaults
+  lib/source-column-alias: section_16_officer
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Holder Stop
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - holder_stop
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - holder_stop
+  name: holder_stop
+  position: 27
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: holder_stop
+  lib/desired-column-alias: holder_stop
+  lib/original-display-name: Holder Stop
+  lib/original-name: holder_stop
+  lib/source: source/table-defaults
+  lib/source-column-alias: holder_stop
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Associated User Tin
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - associated_user_tin
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - associated_user_tin
+  name: associated_user_tin
+  position: 29
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: associated_user_tin
+  lib/desired-column-alias: associated_user_tin
+  lib/original-display-name: Associated User Tin
+  lib/original-name: associated_user_tin
+  lib/source: source/table-defaults
+  lib/source-column-alias: associated_user_tin
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Associated User Name 1
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - associated_user_name_1
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - associated_user_name_1
+  name: associated_user_name_1
+  position: 30
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: associated_user_name_1
+  lib/desired-column-alias: associated_user_name_1
+  lib/original-display-name: Associated User Name 1
+  lib/original-name: associated_user_name_1
+  lib/source: source/table-defaults
+  lib/source-column-alias: associated_user_name_1
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Associated User Tin 1
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - associated_user_tin_1
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - associated_user_tin_1
+  name: associated_user_tin_1
+  position: 31
+  semantic_type: null
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: associated_user_tin_1
+  lib/desired-column-alias: associated_user_tin_1
+  lib/original-display-name: Associated User Tin 1
+  lib/original-name: associated_user_tin_1
+  lib/source: source/table-defaults
+  lib/source-column-alias: associated_user_tin_1
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Associated User Name 2
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - associated_user_name_2
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - associated_user_name_2
+  name: associated_user_name_2
+  position: 32
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: associated_user_name_2
+  lib/desired-column-alias: associated_user_name_2
+  lib/original-display-name: Associated User Name 2
+  lib/original-name: associated_user_name_2
+  lib/source: source/table-defaults
+  lib/source-column-alias: associated_user_name_2
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Associated User Tin 2
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - associated_user_tin_2
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - associated_user_tin_2
+  name: associated_user_tin_2
+  position: 33
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: associated_user_tin_2
+  lib/desired-column-alias: associated_user_tin_2
+  lib/original-display-name: Associated User Tin 2
+  lib/original-name: associated_user_tin_2
+  lib/source: source/table-defaults
+  lib/source-column-alias: associated_user_tin_2
+- active: true
+  base_type: type/Text
+  database_type: text
+  display_name: Associated User Tin 3
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - associated_user_tin_3
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - associated_user_tin_3
+  name: associated_user_tin_3
+  position: 35
+  semantic_type: type/Category
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: associated_user_tin_3
+  lib/desired-column-alias: associated_user_tin_3
+  lib/original-display-name: Associated User Tin 3
+  lib/original-name: associated_user_tin_3
+  lib/source: source/table-defaults
+  lib/source-column-alias: associated_user_tin_3
+- active: true
+  base_type: type/UUID
+  database_type: uuid
+  display_name: Registered Owner ID
+  effective_type: type/UUID
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - registered_owner_id
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - registered_owner_id
+  name: registered_owner_id
+  position: 1
+  semantic_type: type/Owner
+  source: fields
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/deduplicated-name: registered_owner_id
+  lib/desired-column-alias: registered_owner_id
+  lib/original-display-name: Registered Owner ID
+  lib/original-name: registered_owner_id
+  lib/source: source/table-defaults
+  lib/source-column-alias: registered_owner_id
+- base_type: type/Text
+  database_type: text
+  display_name: logo_url
+  effective_type: type/Text
+  field_ref:
+  - expression
+  - logo_url
+  name: logo_url
+  semantic_type: type/URL
+  source: fields
+  lib/deduplicated-name: logo_url
+  lib/desired-column-alias: logo_url
+  lib/expression-name: logo_url
+  lib/original-name: logo_url
+  lib/source: source/expressions
+  lib/source-column-alias: logo_url
+- base_type: type/Text
+  database_type: text
+  display_name: Issuer
+  effective_type: type/Text
+  field_ref:
+  - expression
+  - Issuer
+  name: Issuer
+  semantic_type: null
+  source: fields
+  lib/deduplicated-name: Issuer
+  lib/desired-column-alias: Issuer
+  lib/expression-name: Issuer
+  lib/original-name: Issuer
+  lib/source: source/expressions
+  lib/source-column-alias: Issuer
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Country State Lookup - State → Country Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - country_state_lookup
+    - country_name
+  - join-alias: Country State Lookup - State
+  id:
+  - Sandbox
+  - public
+  - country_state_lookup
+  - country_name
+  name: country_name
+  options:
+    qp/ignore-coercion: true
+  position: 1
+  semantic_type: type/Country
+  source: fields
+  source_alias: Country State Lookup - State
+  table_id:
+  - Sandbox
+  - public
+  - country_state_lookup
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: country_name
+  lib/desired-column-alias: Country State Lookup - State__country_name
+  lib/original-display-name: Country Name
+  lib/original-join-alias: Country State Lookup - State
+  lib/original-name: country_name
+  lib/source: source/joins
+  lib/source-column-alias: country_name
+  metabase.lib.join/join-alias: Country State Lookup - State
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Country State Lookup - State → Full State Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - country_state_lookup
+    - full_state_name
+  - join-alias: Country State Lookup - State
+  id:
+  - Sandbox
+  - public
+  - country_state_lookup
+  - full_state_name
+  name: full_state_name
+  options:
+    qp/ignore-coercion: true
+  position: 3
+  semantic_type: null
+  source: fields
+  source_alias: Country State Lookup - State
+  table_id:
+  - Sandbox
+  - public
+  - country_state_lookup
+  visibility_type: normal
+  lib/breakout?: false
+  lib/deduplicated-name: full_state_name
+  lib/desired-column-alias: Country State Lookup - State__full_state_name
+  lib/original-display-name: Full State Name
+  lib/original-join-alias: Country State Lookup - State
+  lib/original-name: full_state_name
+  lib/source: source/joins
+  lib/source-column-alias: full_state_name
+  metabase.lib.join/join-alias: Country State Lookup - State
+  qp/implicit-field?: true
+visualization_settings:
+  column_settings:
+    '["name","acquisition_date"]':
+      date_separator: '-'
+      date_style: YYYY/M/D
+    '["name","country_name"]':
+      column_title: State
+    '["name","full_state_name"]':
+      column_title: Country
+    '["name","issue_date"]':
+      date_separator: '-'
+      date_style: YYYY/M/D
+    '["name","legal_name"]':
+      link_text: '{{legal_name}}'
+      link_url: https://en.wikipedia.org/wiki/{{legal_name}}
+      view_as: link
+    '["name","registered_owner_id"]':
+      view_as: link
+  table.cell_column: quantity
+  table.column_formatting:
+  - color: '#C7EAEA'
+    columns:
+    - legal_name
+    highlight_row: false
+    operator: not-null
+    type: single
+    value: ''
+  table.columns:
+  - enabled: true
+    name: registered_owner_id
+  - enabled: true
+    name: legal_name
+  - enabled: true
+    name: holder_type
+  - enabled: true
+    name: registered_owner_tin
+  - enabled: true
+    name: holding_type
+  - enabled: true
+    name: drs_or_certificate
+  - enabled: true
+    name: issue_date
+  - enabled: true
+    name: quantity
+  - enabled: true
+    name: legend_or_stop
+  - enabled: true
+    name: acquisition_date
+  - enabled: true
+    name: cost_basis
+  - enabled: true
+    name: inheritance_and_or_gifted
+  - enabled: true
+    name: gift_fmv
+  - enabled: true
+    name: address
+  - enabled: true
+    name: full_state_name
+  - enabled: true
+    name: country_name
+  - enabled: true
+    name: associated_user_name
+  - enabled: true
+    name: associated_user_name_3
+  - enabled: true
+    name: email_address
+  - enabled: true
+    name: phone_number
+  - enabled: true
+    name: lost_holder
+  - enabled: true
+    name: date_of_last_contact
+  - enabled: true
+    name: affiliate
+  - enabled: true
+    name: section_16_officer
+  - enabled: true
+    name: holder_stop
+  - enabled: true
+    name: associated_user_tin
+  - enabled: true
+    name: associated_user_name_1
+  - enabled: true
+    name: associated_user_tin_1
+  - enabled: true
+    name: associated_user_name_2
+  - enabled: true
+    name: associated_user_tin_2
+  - enabled: true
+    name: associated_user_tin_3
+  - enabled: true
+    name: logo_url
+  - enabled: true
+    name: Issuer
+  table.pivot_column: holding_type
+card_schema: 23
+serdes/meta:
+- id: lbJYg0kI_aeYqGR5M_OaM
+  label: detailed_list_of_registered_holders
+  model: Card
+archived_directly: false
+dashboard_id: SCj1YRL_phhm6ultciOLr
+document_id: null
+embedding_type: null
+metabase_version: v1.58.1 (7fbf305)
+source_card_id: null
+type: question

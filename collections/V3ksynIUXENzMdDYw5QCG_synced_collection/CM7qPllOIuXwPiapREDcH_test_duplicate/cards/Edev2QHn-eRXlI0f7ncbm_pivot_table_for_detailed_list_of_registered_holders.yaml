@@ -1,0 +1,375 @@
+name: Pivot table for Detailed List of Registered Holders
+description: null
+entity_id: Edev2QHn-eRXlI0f7ncbm
+created_at: '2026-01-28T11:25:46.001335Z'
+creator_id: kanishka.shetty@vinylequity.com
+display: pivot
+archived: false
+collection_id: CM7qPllOIuXwPiapREDcH
+collection_preview: true
+collection_position: null
+query_type: query
+database_id: Sandbox
+table_id:
+- Sandbox
+- public
+- a_registered_owner_detailed_report_mv2
+enable_embedding: false
+embedding_params: null
+made_public_by_id: null
+public_uuid: null
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Sandbox
+  query:
+    aggregation:
+    - - sum
+      - - field
+        - - Sandbox
+          - public
+          - a_registered_owner_detailed_report_mv2
+          - gift_fmv
+        - base-type: type/Decimal
+    - - sum
+      - - field
+        - - Sandbox
+          - public
+          - a_registered_owner_detailed_report_mv2
+          - cost_basis
+        - base-type: type/Decimal
+    - - sum
+      - - field
+        - - Sandbox
+          - public
+          - a_registered_owner_detailed_report_mv2
+          - quantity
+        - base-type: type/Decimal
+    breakout:
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - legal_name
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - holder_type
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - registered_owner_tin
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - holding_type
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - legend_or_stop
+      - base-type: type/Text
+    - - field
+      - - Sandbox
+        - public
+        - a_registered_owner_detailed_report_mv2
+        - inheritance_and_or_gifted
+      - base-type: type/Text
+    source-table:
+    - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+  type: query
+result_metadata:
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Legal Name
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - legal_name
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - legal_name
+  name: legal_name
+  position: 2
+  source: breakout
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/breakout?: true
+  lib/deduplicated-name: legal_name
+  lib/desired-column-alias: legal_name
+  lib/original-display-name: Legal Name
+  lib/original-name: legal_name
+  lib/source: source/table-defaults
+  lib/source-column-alias: legal_name
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Holder Type
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - holder_type
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - holder_type
+  name: holder_type
+  position: 3
+  semantic_type: type/Category
+  source: breakout
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/breakout?: true
+  lib/deduplicated-name: holder_type
+  lib/desired-column-alias: holder_type
+  lib/original-display-name: Holder Type
+  lib/original-name: holder_type
+  lib/source: source/table-defaults
+  lib/source-column-alias: holder_type
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Registered Owner Tin
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - registered_owner_tin
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - registered_owner_tin
+  name: registered_owner_tin
+  position: 4
+  semantic_type: type/Owner
+  source: breakout
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/breakout?: true
+  lib/deduplicated-name: registered_owner_tin
+  lib/desired-column-alias: registered_owner_tin
+  lib/original-display-name: Registered Owner Tin
+  lib/original-name: registered_owner_tin
+  lib/source: source/table-defaults
+  lib/source-column-alias: registered_owner_tin
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Holding Type
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - holding_type
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - holding_type
+  name: holding_type
+  position: 5
+  semantic_type: type/Category
+  source: breakout
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/breakout?: true
+  lib/deduplicated-name: holding_type
+  lib/desired-column-alias: holding_type
+  lib/original-display-name: Holding Type
+  lib/original-name: holding_type
+  lib/source: source/table-defaults
+  lib/source-column-alias: holding_type
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Legend Or Stop
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - legend_or_stop
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - legend_or_stop
+  name: legend_or_stop
+  position: 9
+  semantic_type: type/Category
+  source: breakout
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/breakout?: true
+  lib/deduplicated-name: legend_or_stop
+  lib/desired-column-alias: legend_or_stop
+  lib/original-display-name: Legend Or Stop
+  lib/original-name: legend_or_stop
+  lib/source: source/table-defaults
+  lib/source-column-alias: legend_or_stop
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Inheritance And Or Gifted
+  effective_type: type/Text
+  field_ref:
+  - field
+  - - Sandbox
+    - public
+    - a_registered_owner_detailed_report_mv2
+    - inheritance_and_or_gifted
+  - null
+  id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  - inheritance_and_or_gifted
+  name: inheritance_and_or_gifted
+  position: 12
+  semantic_type: type/Category
+  source: breakout
+  table_id:
+  - Sandbox
+  - public
+  - a_registered_owner_detailed_report_mv2
+  visibility_type: normal
+  lib/breakout?: true
+  lib/deduplicated-name: inheritance_and_or_gifted
+  lib/desired-column-alias: inheritance_and_or_gifted
+  lib/original-display-name: Inheritance And Or Gifted
+  lib/original-name: inheritance_and_or_gifted
+  lib/source: source/table-defaults
+  lib/source-column-alias: inheritance_and_or_gifted
+- base_type: type/Decimal
+  display_name: Sum of Gift Fmv
+  effective_type: type/Decimal
+  field_ref:
+  - aggregation
+  - 0
+  name: sum
+  source: aggregation
+  lib/deduplicated-name: sum
+  lib/desired-column-alias: sum
+  lib/original-name: sum
+  lib/source: source/aggregations
+  lib/source-column-alias: sum
+- base_type: type/Decimal
+  display_name: Sum of Cost Basis
+  effective_type: type/Decimal
+  field_ref:
+  - aggregation
+  - 1
+  name: sum_2
+  semantic_type: type/Cost
+  source: aggregation
+  lib/deduplicated-name: sum_2
+  lib/desired-column-alias: sum_2
+  lib/original-name: sum
+  lib/source: source/aggregations
+  lib/source-column-alias: sum
+- base_type: type/Decimal
+  display_name: Sum of Quantity
+  effective_type: type/Decimal
+  field_ref:
+  - aggregation
+  - 2
+  name: sum_3
+  source: aggregation
+  lib/deduplicated-name: sum_3
+  lib/desired-column-alias: sum_3
+  lib/original-name: sum
+  lib/source: source/aggregations
+  lib/source-column-alias: sum
+visualization_settings:
+  column_settings: null
+  pivot_table.collapsed_rows:
+    rows:
+    - legal_name
+    - holder_type
+    - legend_or_stop
+    - registered_owner_tin
+    - holding_type
+    - inheritance_and_or_gifted
+    value: []
+  pivot_table.column_split:
+    columns: []
+    rows:
+    - legal_name
+    - holder_type
+    - legend_or_stop
+    - registered_owner_tin
+    - holding_type
+    - inheritance_and_or_gifted
+    values:
+    - sum
+    - sum_2
+    - sum_3
+  pivot_table.column_widths:
+    leftHeaderWidths:
+    - 240
+    - 197
+    - 227
+    - 158
+    - 111
+    - 180
+    totalLeftHeaderWidths: 1113
+    valueHeaderWidths:
+      '1': 115
+      '2': 142
+card_schema: 23
+serdes/meta:
+- id: Edev2QHn-eRXlI0f7ncbm
+  label: pivot_table_for_detailed_list_of_registered_holders
+  model: Card
+archived_directly: false
+dashboard_id: SCj1YRL_phhm6ultciOLr
+document_id: null
+embedding_type: null
+metabase_version: v1.58.1 (7fbf305)
+source_card_id: null
+type: question

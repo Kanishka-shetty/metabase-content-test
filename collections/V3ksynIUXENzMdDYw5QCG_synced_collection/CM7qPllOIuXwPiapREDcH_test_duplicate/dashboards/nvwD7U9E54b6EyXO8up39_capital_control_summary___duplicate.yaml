@@ -1,0 +1,232 @@
+name: Capital Control Summary - Duplicate
+description: null
+entity_id: nvwD7U9E54b6EyXO8up39
+created_at: '2026-01-28T11:25:03.161317Z'
+creator_id: kanishka.shetty@vinylequity.com
+archived: false
+collection_id: CM7qPllOIuXwPiapREDcH
+auto_apply_filters: true
+collection_position: null
+position: null
+enable_embedding: false
+embedding_params: null
+made_public_by_id: null
+public_uuid: null
+show_in_getting_started: false
+caveats: null
+points_of_interest: null
+parameters:
+- id: 5ef05f23
+  name: as of date
+  sectionId: date
+  slug: as_of_date
+  type: date/all-options
+- id: f68de3cb
+  isMultiSelect: true
+  name: issuer_name
+  sectionId: string
+  slug: issuer_name
+  type: string/=
+- filteringParameters:
+  - f68de3cb
+  id: 5142af58
+  name: issue_name
+  sectionId: string
+  slug: issue_name
+  type: string/=
+- id: 6bc1c2c6
+  name: Date
+  sectionId: date
+  slug: date
+  type: date/range
+serdes/meta:
+- id: nvwD7U9E54b6EyXO8up39
+  label: capital_control_summary___duplicate
+  model: Dashboard
+archived_directly: false
+dashcards:
+- entity_id: XeAIK_mrCBsPMC-_kF8W2
+  card_id: lHdB49EaNUpNqVp8geAui
+  created_at: '2026-01-28T11:25:03.161317Z'
+  row: 7
+  col: 0
+  size_x: 24
+  size_y: 7
+  action_id: null
+  dashboard_tab_id: null
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: lHdB49EaNUpNqVp8geAui
+    parameter_id: f68de3cb
+    target:
+    - dimension
+    - - field
+      - - Sandbox
+        - public
+        - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+        - issuer_legal_name
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: lHdB49EaNUpNqVp8geAui
+    parameter_id: 5ef05f23
+    target:
+    - dimension
+    - - field
+      - - Sandbox
+        - public
+        - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+        - effective_date
+      - base-type: type/Date
+    - stage-number: 0
+  - card_id: lHdB49EaNUpNqVp8geAui
+    parameter_id: 5142af58
+    target:
+    - dimension
+    - - field
+      - - Sandbox
+        - public
+        - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+        - issue_name
+      - base-type: type/Text
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    card.description: last 5 Records
+    card.title: 'Capital Control Table '
+    column_settings: null
+    table.cell_column: issued_and_outstanding
+    table.columns:
+    - enabled: false
+      name: issuer_legal_name
+    - enabled: true
+      name: effective_date
+    - enabled: true
+      name: issued_and_outstanding
+    - enabled: true
+      name: reserved_capital
+    - enabled: true
+      name: authorized_capital
+    - enabled: false
+      name: created_at
+    - enabled: false
+      name: issuer_id
+    - enabled: false
+      name: issue_name
+    - enabled: false
+      name: issue_id
+    - enabled: true
+      name: available_for_issuance
+    table.pivot_column: created_at
+  serdes/meta:
+  - id: nvwD7U9E54b6EyXO8up39
+    model: Dashboard
+  - id: XeAIK_mrCBsPMC-_kF8W2
+    model: DashboardCard
+- entity_id: DP5eRqwojWcJ-wvzFUgrU
+  card_id: 3uR6QwCEAXP9mzikC2DTx
+  created_at: '2026-01-28T11:25:03.161317Z'
+  row: 0
+  col: 0
+  size_x: 9
+  size_y: 7
+  action_id: null
+  dashboard_tab_id: null
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: 3uR6QwCEAXP9mzikC2DTx
+    parameter_id: f68de3cb
+    target:
+    - dimension
+    - - field
+      - - Sandbox
+        - public
+        - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+        - issuer_legal_name
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: 3uR6QwCEAXP9mzikC2DTx
+    parameter_id: 5ef05f23
+    target:
+    - dimension
+    - - field
+      - - Sandbox
+        - public
+        - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+        - effective_date
+      - base-type: type/Date
+    - stage-number: 0
+  - card_id: 3uR6QwCEAXP9mzikC2DTx
+    parameter_id: 5142af58
+    target:
+    - dimension
+    - - field
+      - - Sandbox
+        - public
+        - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+        - issue_name
+      - base-type: type/Text
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: nvwD7U9E54b6EyXO8up39
+    model: Dashboard
+  - id: DP5eRqwojWcJ-wvzFUgrU
+    model: DashboardCard
+- entity_id: Lr_GG1pldiEZFJyUJfRsf
+  card_id: 0f_Z7Rcw4SfS97qweyu9b
+  created_at: '2026-01-28T11:25:03.161317Z'
+  row: 0
+  col: 9
+  size_x: 15
+  size_y: 7
+  action_id: null
+  dashboard_tab_id: null
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: 0f_Z7Rcw4SfS97qweyu9b
+    parameter_id: 5142af58
+    target:
+    - dimension
+    - - field
+      - - Sandbox
+        - public
+        - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+        - issue_name
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: 0f_Z7Rcw4SfS97qweyu9b
+    parameter_id: f68de3cb
+    target:
+    - dimension
+    - - field
+      - - Sandbox
+        - public
+        - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+        - issuer_legal_name
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: 0f_Z7Rcw4SfS97qweyu9b
+    parameter_id: 6bc1c2c6
+    target:
+    - dimension
+    - - field
+      - - Sandbox
+        - public
+        - a_capital_control_detailed_report_mv__mbarchiv__1762500783
+        - effective_date
+      - base-type: type/Date
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: nvwD7U9E54b6EyXO8up39
+    model: Dashboard
+  - id: Lr_GG1pldiEZFJyUJfRsf
+    model: DashboardCard
+embedding_type: null
+initially_published_at: null
+tabs: []
+width: full
